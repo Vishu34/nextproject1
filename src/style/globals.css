@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +9,7 @@
   --background-end-rgb: 255, 255, 255;
   --text-color:#ff6f00;
   --bg-color:#ff6f00;
+  ---bg-color:pink;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,8 +19,11 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+html{
+  font-family: var(--lato);
+}
 body {
+  font-family:var(--lato);
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

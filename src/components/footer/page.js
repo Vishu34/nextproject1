@@ -3,7 +3,13 @@ import { MdCall } from 'react-icons/md';
 import { BsTwitter } from 'react-icons/bs';
 import Link from 'next/link';
 import Image from 'next/image';
-
+import { Cinzel_Decorative } from "next/font/google";
+const cinzel=Cinzel_Decorative({
+  weight:'700',
+  variable:'--cinzel',
+  subsets:['latin'],
+  
+})
 const Footer = () => {
   return (
     <>
@@ -29,7 +35,7 @@ const Footer = () => {
 
           <div className=" grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 pb-10 ">
                     <div className="space-y-8 my-5">
-                    <h1 className="separator relative text-xl">Our Newsletter</h1>
+                    <h1 className={` ${ cinzel.className} separator relative text-xl`}>Our Newsletter</h1>
                     <p>
                         Making it look like readable English.The point of using Lorem
                         Ipsum is that it has a more-or less normal distribution of
@@ -42,7 +48,7 @@ const Footer = () => {
                     </div>
 
                 <div className="space-y-8 my-5">
-                        <h1 className="separator relative text-xl">
+                        <h1 className={` ${ cinzel.className} separator relative text-xl`}>
                             Our Services
                         </h1>
                         <ul className="space-y-3 ">
@@ -57,7 +63,7 @@ const Footer = () => {
                 </div>
 
                 <div className="space-y-8 my-5">
-                        <h1 className="separator relative text-xl">
+                        <h1 className={` ${ cinzel.className} separator relative text-xl`}>
                         Quick Links
                         </h1>
                         <ul className="space-y-3 ">
@@ -70,7 +76,7 @@ const Footer = () => {
                         </ul>
                 </div>
                 <div className="space-y-8 my-5">
-                        <h1 className="separator relative text-xl">
+                        <h1 className={` ${ cinzel.className} separator relative text-xl`}>
                         Get In Touch
                         </h1>
                         <ul className="space-y-3 ">
@@ -91,7 +97,7 @@ const Footer = () => {
                 </div>
           </div>
           <hr className="mt-5"/>
-          <p className="text-center py-4">© Copyright 2022, All Rights Reserved, <span className="astrology ">Astrology</span></p>
+          <p className="text-center py-4">© Copyright 2022, All Rights Reserved, <span className={"astrology"}>Astrology</span></p>
         </div>
       </footer>
     </>

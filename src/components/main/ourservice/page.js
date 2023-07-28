@@ -1,11 +1,18 @@
 import Image from "next/image";
+import { Cinzel_Decorative } from "next/font/google";
+const cinzel=Cinzel_Decorative({
+  weight:'700',
+  variable:'--cinzel',
+  subsets:['latin'],
+  
+})
 const Ourservice = () => {
   return (
     <>
       <section className="bg-white text-black">
         <div className="container mx-auto w-[80%] py-12">
           <div className="text-center space-y-5 py-8">
-            <h1 className="text-4xl font-bold">Our <span className="astrology">Services</span></h1>
+            <h1 className={`text-3xl ${cinzel.className}`}>Our <span className="astrology">Services</span></h1>
            <p className="text-slate-600  md:w-[50%] mx-auto">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
@@ -16,7 +23,7 @@ const Ourservice = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <div className="service-box text-center space-y-8 bg-white   border p-10  hover:shadow-slate-500 hover:shadow-md">
              <Image src="/main/sv6.png" width="90" height="60" alt="img" className="mx-auto service-img p-4 rounded-full"/>
-              <h1 className="font-bold service-head">Birth Journal</h1>
+              <h1 className={`${cinzel.className}  service-head`}>Birth Journal</h1>
               <p>
                 On the other hand, we denounce with righteous indignation and
                 dislike men.
@@ -25,7 +32,7 @@ const Ourservice = () => {
             </div>
             <div className="service-box text-center space-y-8 bg-white   border  p-10 hover:shadow-slate-500 hover:shadow-md ">
              <Image src="/main/sv6.png" width="90" height="60" alt="img" className="mx-auto service-img p-4 rounded-full"/>
-              <h1 className="font-bold service-head">Vastu Shastra</h1>
+              <h1 className={`${cinzel.className}  service-head`}>Vastu Shastra</h1>
               <p>
                 On the other hand, we denounce with righteous indignation and
                 dislike men.
@@ -34,7 +41,7 @@ const Ourservice = () => {
             </div>
             <div className="service-box text-center space-y-8 bg-white   border  p-10 hover:shadow-slate-500 hover:shadow-md ">
              <Image src="/main/sv6.png" width="90" height="60" alt="img" className="mx-auto service-img p-4 rounded-full"/>
-              <h1 className="font-bold service-head">Face Reading</h1>
+              <h1 className={`${cinzel.className}  service-head`}>Face Reading</h1>
               <p>
                 On the other hand, we denounce with righteous indignation and
                 dislike men.
@@ -43,7 +50,7 @@ const Ourservice = () => {
             </div>
             <div className="service-box text-center space-y-8 bg-white   border  p-10 hover:shadow-slate-500 hover:shadow-md ">
              <Image src="/main/sv6.png" width="90" height="60" alt="img" className="mx-auto service-img p-4 rounded-full"/>
-              <h1 className="font-bold service-head">Lal Kitab</h1>
+              <h1 className={`${cinzel.className}  service-head`}>Lal Kitab</h1>
               <p>
                 On the other hand, we denounce with righteous indignation and
                 dislike men.
@@ -52,7 +59,7 @@ const Ourservice = () => {
             </div>
             <div className="service-box text-center space-y-8 bg-white   border  p-10 hover:shadow-slate-500 hover:shadow-md ">
              <Image src="/main/sv6.png" width="90" height="60" alt="img" className="mx-auto service-img p-4 rounded-full"/>
-              <h1 className="font-bold service-head">Crystal Ball</h1>
+              <h1 className={`${cinzel.className}  service-head`}>Crystal Ball</h1>
               <p>
                 On the other hand, we denounce with righteous indignation and
                 dislike men.
@@ -61,7 +68,7 @@ const Ourservice = () => {
             </div>
             <div className="service-box text-center space-y-8 bg-white   border  p-10 hover:shadow-slate-500 hover:shadow-md ">
              <Image src="/main/sv6.png" width="90" height="60" alt="img" className="mx-auto service-img p-4 rounded-full"/>
-              <h1 className="font-bold service-head">Kundli Dosh</h1>
+              <h1 className={`${cinzel.className}  service-head`}>Kundli Dosh</h1>
               <p>
               On the other hand, we denounce with righteous indignation and dislike men.
               </p>

@@ -1,12 +1,20 @@
-import { Bungee_Outline } from "next/font/google";
+
+import { Cinzel_Decorative } from "next/font/google";
+const cinzel=Cinzel_Decorative({
+  weight:'700',
+  variable:'--cinzel',
+  subsets:['latin'],
+  
+})
+
 import Image from "next/image";
 const Aboutastro = () => {
   return (
     <>
-      <section className="bg-white text-black py-14">
+      <section className="bg-white text-black py-14 ">
         <div className="container mx-auto w-[80%]">
           <div className="text-center space-y-5 py-8">
-            <h1 className="text-4xl font-bold">
+            <h1 className={`${cinzel.className}  text-3xl `}>
               About <span className="astrology">Astrology</span>
             </h1>
             <p className="text-slate-600  md:w-[50%] mx-auto">
@@ -24,7 +32,7 @@ const Aboutastro = () => {
               className=" mx-auto py-3"
             />
             <div className="space-y-5">
-              <h1 className="font-bold text-xl">Know About Astrology</h1>
+              <h1 className={`${cinzel.className} text-xl`}>Know About Astrology</h1>
               <p className="text-slate-600">
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.

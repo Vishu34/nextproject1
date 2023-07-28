@@ -1,11 +1,18 @@
 import Image from "next/image";
+import { Cinzel_Decorative } from "next/font/google";
+const cinzel=Cinzel_Decorative({
+  weight:'700',
+  variable:'--cinzel',
+  subsets:['latin'],
+  
+})
 const Whychoose = () => {
   return (
     <>
       <section className="bg-gray-100 text-black">
         <div className="container mx-auto w-[80%] py-12">
           <div className="text-center space-y-5 py-8">
-            <h1 className="text-4xl font-bold">
+            <h1 className={` ${cinzel.className} text-3xl`}>
               Why <span className="astrology">Choose Us</span>
             </h1>
             <p className="text-slate-600  md:w-[50%] mx-auto ">

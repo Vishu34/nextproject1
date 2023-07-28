@@ -1,9 +1,18 @@
-// "use client"
+"use client"
 import Image from "next/image";
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-// // Import Swiper styles
-// import 'swiper/css';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+// import 'swiper/css/scrollbar';
+import { Cinzel_Decorative } from "next/font/google";
+const cinzel=Cinzel_Decorative({
+  weight:'700',
+  variable:'--cinzel',
+  subsets:['latin'],
+  
+})
 
 const Clientsays = () => {
   return (
@@ -11,7 +20,7 @@ const Clientsays = () => {
       <section className="bg-white text-black">
         <div className="container mx-auto w-[80%] py-12">
           <div className="text-center space-y-5 py-8">
-            <h1 className="text-4xl font-bold">
+            <h1 className={` ${ cinzel.className} text-3xl`}>
               What Client<span className="astrology">Says</span>
             </h1>
             <p className="text-slate-600  md:w-[50%] mx-auto">
@@ -22,18 +31,22 @@ const Clientsays = () => {
           </div>
 
           <div className="text-black">
-          {/* <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+          <Swiper
+    modules={[Navigation, Pagination, Scrollbar, A11y]}
+    spaceBetween={50}
+    slidesPerView={3}
+    navigation
+    pagination={{ clickable: true }}
+    scrollbar={{ draggable: true }}
+    onSwiper={(swiper) => console.log(swiper)}
+    onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide>Slide 1</SwiperSlide>
       <SwiperSlide>Slide 2</SwiperSlide>
       <SwiperSlide>Slide 3</SwiperSlide>
       <SwiperSlide>Slide 4</SwiperSlide>
       
-    </Swiper> */}
+    </Swiper>
           </div>
         </div>
       </section>
@@ -42,7 +55,7 @@ const Clientsays = () => {
         <div className="container mx-auto w-[80%] py-12">
           <div className="">
             <div className="text-center space-y-5 py-8">
-              <h1 className="text-4xl font-bold">
+              <h1 className={` ${ cinzel.className} text-3xl`}>
                 Download <span className="astrology">Our Mobile App</span>
               </h1>
               <p className="text-slate-600  md:w-[50%] mx-auto">

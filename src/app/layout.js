@@ -1,8 +1,23 @@
 import Footer from '@/components/footer/page'
+import '../style/footer.css'
 import '../style/globals.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Cinzel_Decorative } from "next/font/google";
+import { Lato } from 'next/font/google';
+const lato=Lato(
+  {
+    weight:'400',
+    variable:'--lato',
+    subsets:['latin']
+  }
+)
+const cinzel=Cinzel_Decorative({
+  weight:'700',
+  variable:'--cinzel',
+  subsets:['latin'],
+  
+})
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,8 +26,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}
+    <html lang="en" className={`${cinzel.className} ${lato.className}`}>
+      <body className={lato.className}>{children}
       <Footer/></body>
     </html>
   )

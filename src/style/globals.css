@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --text-color:#ff6f00;
+  --bg-color:#ff6f00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+
+
+
+/* main */
+.main{
+  display: none;
+}
+@media only screen and (max-width:727px) {
+  .main{
+    display: block;
+    justify-content: center;
+  }
+  .main-sm{
+    display: none;
+  }
+}
+.main-before-453{
+display: none;
+}
+@media only screen and (max-width:453px) {
+  .main-before-453{
+    display: block;
+    justify-content: center;
+  }
+  .main-after{
+    display: none;
+  }
+}
+
+
+/* header */
+
+
+.header-image{
+ background:url('/header/star.jpg');
+ 
+  width: 100%;
+    position: relative;
+   
+    z-index: 1;
+   
+    
+    background-repeat: no-repeat;
+   
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+.make-it{
+  background-color: #ff6f00;
+  
+  border: 2px solid #ff6f00;
+}
+.make-it:hover{
+  background-color:rgba(0, 0, 0, 0.3);
+  color: #ff6f00;
+}
+
+.daily-planetary{
+  position: relative;
+  background:url('/main/overview_bg.jpg');
+ 
+  width: 100%;
+    position: relative;
+   background-size: cover;
+    z-index: 1;
+   
+    
+    background-repeat: no-repeat;
+   
+  background-position: center center;
+  background-attachment: fixed;
+}
+.daily-planetary::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* navbar */
+
+.mobile{
+display: none;
+}
+@media only screen and (max-width:1068px) {
+  .mobile{
+    display: block;
+  }
+  .desktop{
+    display: none;
+  }
+}
+
+:is(.homelist,.pagelist,.bloglist,.shoplist):hover{
+  background-color: #ff6f00;
+}
+.homelist:hover .homechild{
+  display: block;
+}
+.shoplist:hover .shopchild{
+  display: block;
+}
+.bloglist:hover .blogchild{
+  display: block;
+}
+.pagelist:hover .pagechild{
+  display: block;
+}
+
+:is(.homechild li,.pagechild li,.blogchild li,.shopchild li):hover{
+  background-color: #ff6f00;
+}
+.homelist,.bloglist,.shoplist,.pagelist{
+
+  position: relative
+}
+.homechild,.blogchild,.shopchild,.pagechild{
+  display: none;
+position: absolute;
+top:48px;
+left:0;
+background-color:#333333;
+
+}
+
+.mobilelist{
+  background-color: #333333;
+  z-index:200000;
+}
+.navlist:hover{
+  background-color: #ff6f00;
+}
+
+:is(.homechild1 li,.blogchild1 li,.shopchild1 li,.pagechild1 li):hover{
+background-color: #ff6f00;
+}
+
+.homechild1,.blogchild1,.shopchild1,.pagechild1{
+  
+background-color:#333333;
+
+}
+/* Expert */
+
+.fa-icon{
+  
+    
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-box-shadow: inset 1px 1px 7px -5px #000000;
+    -moz-box-shadow: inset 1px 1px 7px -5px #000000;
+    -o-box-shadow: inset 1px 1px 7px -5px #000000;
+    -ms-box-shadow: inset 1px 1px 7px -5px #000000;
+    box-shadow: inset 1px 1px 7px -5px #000000;
+}
+.expert-box:hover .fa-icon,.expert-img{
+  color:#ff6f00;
+}
+.expert-box:hover .expert-img{
+  box-shadow:2px 2px 20px 1px slategrey;
+}
+
+/* now we have */
+
+.have-img{
+  position: relative;
+  background:url('/main/timer_bg.jpg');
+ 
+  width: 100%;
+    position: relative;
+   background-size: cover;
+    z-index: 1;
+   
+    
+    background-repeat: no-repeat;
+   
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.have-img::after{
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* ourservie */
+
+ .service-box:hover .service-img {
+  background-color: white;
+  color: #ff6f00;
+  box-shadow:2px 2px 23px -9px black;
+
+  
+}
+
+.service-box:hover .service-head{
+  color: #ff6f00;
+}
+
+/* foooter */
+.footer{
+  background-color: #222222;
+  
+}
+.astrology{
+  color: var(--text-color);
+}
+.icon-color{
+  color: var(--text-color);
+}
+.icon-plan{
+  background-color: #ff6f00;
+  color: white;
+}
+.icon-plan:hover{
+  background-color: #222222;
+  color: #ff6f00;
+}
+input:focus{
+  border: none;
+  outline:none;
+}
+.input{
+  background-color: #222222;
+}
+.input:hover{
+  background-color:rgba(255, 255, 255, 0.3) ;
+}
+.list:hover{
+  color: var(--text-color);
+}
+.separator::before{
+  content: '';
+  position: absolute;
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  width: 100px;
+  height: 3px;
+  bottom:-12px;
+  left:1px;
+}

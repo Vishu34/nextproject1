@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
 import { Cinzel_Decorative } from "next/font/google";
 const cinzel=Cinzel_Decorative({
@@ -31,7 +31,7 @@ const Clientsays = () => {
           </div>
 
           <div className="text-black">
-          <Swiper
+          {/* <Swiper
     modules={[Navigation, Pagination, Scrollbar, A11y]}
     spaceBetween={50}
     slidesPerView={3}
@@ -46,7 +46,7 @@ const Clientsays = () => {
       <SwiperSlide>Slide 3</SwiperSlide>
       <SwiperSlide>Slide 4</SwiperSlide>
       
-    </Swiper>
+    </Swiper> */}
           </div>
         </div>
       </section>

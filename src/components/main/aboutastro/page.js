@@ -8,6 +8,7 @@ const cinzel=Cinzel_Decorative({
 })
 
 import Image from "next/image";
+import Aos from "aos";
 const Aboutastro = () => {
   return (
     <>
@@ -24,6 +25,8 @@ const Aboutastro = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 py-8 items-center ">
+           
+            <div className="" data-aos="fade-right">
             <Image
               src="/main/about.png"
               width="380"
@@ -31,7 +34,8 @@ const Aboutastro = () => {
               alt="aboutearth"
               className=" mx-auto py-3"
             />
-            <div className="space-y-5">
+            </div>
+            <div className="space-y-5" data-aos="fade-left">
               <h1 className={`${cinzel.className} text-xl`}>Know About Astrology</h1>
               <p className="text-slate-600">
                 It is a long established fact that a reader will be distracted

@@ -122,14 +122,14 @@ const Header = () => {
             <motion.h1
              initial={{scale:0 }}
              animate={{scale:1}} 
-             transition={{ type:"spring", stiffness:"300" ,delay:0.5 }}
+             transition={{ type:"spring", stiffness:"300" ,delay:0 }}
              className={`text-4xl sm:text-5xl line leading-normal ${cinzel.className}`}>
               Astrology Revels The Will Of God
             </motion.h1>
             <motion.ul 
             initial={{scale:0 }}
              animate={{scale:1}} 
-             transition={{ type:"spring", stiffness:"300" ,delay:1.5 }}
+             transition={{ type:"spring", stiffness:"300" ,delay:1 }}
             className="flex justify-center space-x-5 text-md sm:text-2xl">
               <li>Horoscopes *</li>
               <li>Gemstones</li>
@@ -139,7 +139,7 @@ const Header = () => {
             <motion.button 
             initial={{y:400 }}
              animate={{y:0}} 
-             transition={{ type:"spring", stiffness:"300" ,delay:2.5 }}
+             transition={{ type:"spring", stiffness:"300" ,delay:2 }}
               className="make-it py-2 px-4 rounded-sm">
               Make it Now
             </motion.button>

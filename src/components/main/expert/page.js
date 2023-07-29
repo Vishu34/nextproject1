@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import CountUp from "react-countup";
+import { useState } from "react";
 
 import { Cinzel_Decorative } from "next/font/google";
 const cinzel=Cinzel_Decorative({
@@ -15,7 +16,11 @@ const cinzel=Cinzel_Decorative({
   subsets:['latin'],
   
 })  
+import ScrollTrigger from "react-scroll-trigger";
+
+
 const Expert = () => {
+  const [counteron,setcounteron]=useState(false)
   return (
     <>
       <section className="bg-white text-black">
@@ -131,28 +136,36 @@ const Expert = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 py-5 gap-8">
+          <ScrollTrigger onEnter={()=>setcounteron(true)} onExit={()=>setcounteron(false)}>   
+          { 
+
+            counteron ? ( <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 py-5 gap-8">
+              
               <div className="text-center space-y-5">
               <Image src="/main/timer_1.png" width="40" height="40" alt="imag" className="mx-auto border-4 border-dotted rounded-full w-28 h-28 p-3"/>
-                 <h1 className={` ${cinzel.className} astrology text-xl`} ><CountUp end={200} duration={2}/></h1>
+                 <h1 className={` ${cinzel.className} astrology text-xl font-serif`} ><CountUp end={200} duration={2}/></h1>
                  <p className="font-bold">Offices Worldwide</p>
               </div>
               <div className="text-center space-y-5">
               <Image src="/main/timer_2.png" width="40" height="40" alt="imag" className="mx-auto border-4 border-dotted rounded-full w-28 h-28 p-3"/>
-                 <h1 className={` ${cinzel.className} astrology text-xl`} ><CountUp end={500} duration={2}/></h1>
+                 <h1 className={` ${cinzel.className} astrology text-xl font-serif`} ><CountUp end={500} duration={2}/></h1>
                  <p className="font-bold">Offices Worldwide</p>
               </div>
               <div className="text-center space-y-5">
               <Image src="/main/timer_3.png" width="40" height="40" alt="imag" className="mx-auto border-4 border-dotted rounded-full w-28 h-28 p-3"/>
-                 <h1 className={` ${cinzel.className} astrology text-xl`} ><CountUp end={1000} duration={2}/></h1>
+                 <h1 className={` ${cinzel.className} astrology text-xl font-serif`} ><CountUp end={1000} duration={2}/></h1>
                  <p className="font-bold">Offices Worldwide</p>
               </div>
               <div className="text-center space-y-5">
               <Image src="/main/timer_3 (1).png" width="40" height="40" alt="imag" className="mx-auto border-4 border-dotted rounded-full w-28 h-28 p-3"/>
-                 <h1 className={` ${cinzel.className} astrology text-xl`} ><CountUp end={800} duration={2}/></h1>
+                 <h1 className={` ${cinzel.className} astrology text-xl font-serif`} ><CountUp end={800} duration={2}/></h1>
                  <p className="font-bold">Offices Worldwide</p>
               </div>
-          </div>
+              
+          </div>)  : null
+          }
+          
+           </ScrollTrigger>
         </div>
       </section>
     </>

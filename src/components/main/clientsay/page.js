@@ -6,13 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
-import { Cinzel_Decorative } from "next/font/google";
-const cinzel=Cinzel_Decorative({
-  weight:'700',
-  variable:'--cinzel',
-  subsets:['latin'],
-  
-})
+
 
 const Clientsays = () => {
   return (
@@ -20,7 +14,7 @@ const Clientsays = () => {
       <section className="bg-white text-black">
         <div className="container mx-auto w-[80%] py-12">
           <div className="text-center space-y-5 py-8">
-            <h1 className={` ${ cinzel.className} text-3xl`}>
+            <h1 className={` head text-3xl`}>
               What Client<span className="astrology">Says</span>
             </h1>
             <p className="text-slate-600  md:w-[50%] mx-auto">
@@ -55,7 +49,7 @@ const Clientsays = () => {
         <div className="container mx-auto w-[80%] py-12">
           <div className="">
             <div className="text-center space-y-5 py-8">
-              <h1 className={` ${ cinzel.className} text-3xl`}>
+              <h1 className={` head text-3xl`}>
                 Download <span className="astrology">Our Mobile App</span>
               </h1>
               <p className="text-slate-600  md:w-[50%] mx-auto">

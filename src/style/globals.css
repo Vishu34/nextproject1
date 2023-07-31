@@ -2,7 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+   
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -19,11 +19,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-html{
-  font-family: var(--lato);
-}
+
 body {
-  font-family:var(--lato);
+ 
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -33,7 +31,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.head{
+  font-family:var(--cinzel)
 
+}
 
 
 /* main */
@@ -217,7 +218,7 @@ background-color:#333333;
   width: 100%;
     position: relative;
    background-size: cover;
-    z-index: 1;
+    z-index: -1;
    
     
     background-repeat: no-repeat;

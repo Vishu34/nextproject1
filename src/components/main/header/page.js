@@ -8,13 +8,7 @@ import Link from "next/link";
 import Desktopnavbar from "@/components/navbar/desktop/page";
 
 import Mobilenavbar from "@/components/navbar/mobile/page";
-import { Cinzel_Decorative } from "next/font/google";
-const cinzel=Cinzel_Decorative({
-  weight:'700',
-  variable:'--cinzel',
-  subsets:['latin'],
-  
-})
+
 import { motion } from "framer-motion";
 const Header = () => {
 
@@ -121,15 +115,15 @@ const Header = () => {
           <div className="space-y-10 text-center pt-40 pb-64 px-5 sm:px-12">
             <motion.h1
              initial={{scale:0 }}
-             animate={{scale:1}} 
+             whileInView={{scale:1}} 
              transition={{ type:"spring", stiffness:"300" ,delay:0 }}
-             className={`text-4xl sm:text-5xl line leading-normal ${cinzel.className}`}>
+             className={`text-4xl sm:text-5xl line leading-relaxed head`}>
               Astrology Revels The Will Of God
             </motion.h1>
             <motion.ul 
             initial={{scale:0 }}
-             animate={{scale:1}} 
-             transition={{ type:"spring", stiffness:"300" ,delay:1 }}
+             whileInView={{scale:1}} 
+             transition={{ type:"spring", stiffness:"300" ,delay:0.8 }}
             className="flex justify-center space-x-5 text-md sm:text-2xl">
               <li>Horoscopes *</li>
               <li>Gemstones</li>
@@ -139,6 +133,7 @@ const Header = () => {
             <motion.button 
             initial={{y:400 }}
              animate={{y:0}} 
+             
              transition={{ type:"spring", stiffness:"300" ,delay:2 }}
               className="make-it py-2 px-4 rounded-sm">
               Make it Now

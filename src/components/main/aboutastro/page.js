@@ -1,21 +1,16 @@
+"use client"
+import { motion } from "framer-motion";
 
-import { Cinzel_Decorative } from "next/font/google";
-const cinzel=Cinzel_Decorative({
-  weight:'700',
-  variable:'--cinzel',
-  subsets:['latin'],
-  
-})
 
 import Image from "next/image";
-import Aos from "aos";
+
 const Aboutastro = () => {
   return (
     <>
       <section className="bg-white text-black py-14 ">
         <div className="container mx-auto w-[80%]">
           <div className="text-center space-y-5 py-8">
-            <h1 className={`${cinzel.className}  text-3xl `}>
+            <h1 className={` head  text-3xl`}>
               About <span className="astrology">Astrology</span>
             </h1>
             <p className="text-slate-600  md:w-[50%] mx-auto">
@@ -26,7 +21,10 @@ const Aboutastro = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 py-8 items-center ">
            
-            <div className="" data-aos="fade-right">
+            <motion.div 
+            initial={{x:-20}}
+            whileInView={{x:0}}
+            transition={{type:"spring", stiffness:"300" ,duration:"1"}} className="">
             <Image
               src="/main/about.png"
               width="380"
@@ -34,9 +32,13 @@ const Aboutastro = () => {
               alt="aboutearth"
               className=" mx-auto py-3"
             />
-            </div>
-            <div className="space-y-5" data-aos="fade-left">
-              <h1 className={`${cinzel.className} text-xl`}>Know About Astrology</h1>
+            </motion.div>
+            <motion.div 
+             initial={{x:20}}
+            whileInView={{x:0}}
+            transition={{type:"spring", stiffness:"300" ,duration:"1"}}
+            className="space-y-5" >
+              <h1 className={`  head text-xl`}>Know About Astrology</h1>
               <p className="text-slate-600">
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
@@ -50,7 +52,7 @@ const Aboutastro = () => {
                 ipsum' will uncover many web sites still in their infancy.
               </p>
               <button className="make-it py-2 px-4 rounded-sm text-white hover:bg-white">Know More</button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

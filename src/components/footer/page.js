@@ -4,25 +4,19 @@ import { MdCall } from 'react-icons/md';
 import { BsTwitter } from 'react-icons/bs';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Cinzel_Decorative } from "next/font/google";
-const cinzel=Cinzel_Decorative({
-  weight:'700',
-  variable:'--cinzel',
-  subsets:['latin'],
-  
-})
-import { motion, spring } from 'framer-motion';
+
+import { motion } from 'framer-motion';
 const scrollanimation={
-  offscreen:{y:100},
-  onscreen:{y:0 , rotate:[-360,360]},
-  transition:{type:"spring", stiffness:"100" , duration:"2" , bounce:2},
-  viewport:{once:false, amount:0.5}
+  offscreen:{x:-50},
+  onscreen:{x:0},
+  transition:{type:"spring", stiffness:"300" , duration:"2" , bounce:2},
+ 
 }
 const scrollanimation1={
-  offscreen:{y:-100,opacity:0},
+  offscreen:{y:-50,opacity:0},
   onscreen:{y:0 ,opacity:1},
-  transition:{type:"spring", stiffness:"300" ,delay:"1" , bounce:2},
-  viewport:{once:false, amount:1.5}
+  transition:{type:"spring", stiffness:"100" ,delay:"2" , bounce:2},
+ 
 }
 const Footer = () => {
   return (
@@ -57,7 +51,7 @@ const Footer = () => {
                     initial={"offscreen"}
                     whileInView={"onscreen"}
                     
-                    variants={scrollanimation} className={` ${ cinzel.className} separator relative text-xl`}>Our Newsletter</motion.h1>
+                    variants={scrollanimation} className={` head separator relative text-xl`}>Our Newsletter</motion.h1>
                     <motion.p  initial={"offscreen"}
                     whileInView={"onscreen"}
                     
@@ -76,7 +70,7 @@ const Footer = () => {
                         <motion.h1 
                         initial={"offscreen"}
                         whileInView={"onscreen"}
-                        variants={scrollanimation} className={` ${ cinzel.className} separator relative text-xl`}>
+                        variants={scrollanimation} className={` head separator relative text-xl`}>
                             Our Services
                         </motion.h1>
                         <motion.ul  initial={"offscreen"}
@@ -97,7 +91,7 @@ const Footer = () => {
                         <motion.h1 
                         initial={"offscreen"}
                         whileInView={"onscreen"}
-                        variants={scrollanimation} className={` ${ cinzel.className} separator relative text-xl`}>
+                        variants={scrollanimation} className={` head separator relative text-xl`}>
                         Quick Links
                         </motion.h1>
                         <motion.ul  initial={"offscreen"}
@@ -116,7 +110,7 @@ const Footer = () => {
                         <motion.h1 
                         initial={"offscreen"}
                         whileInView={"onscreen"}
-                        variants={scrollanimation} className={` ${ cinzel.className} separator relative text-xl`}>
+                        variants={scrollanimation} className={` head separator relative text-xl`}>
                         Get In Touch
                         </motion.h1>
                         <motion.ul  initial={"offscreen"}

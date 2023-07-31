@@ -5,13 +5,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import { FaList, FaTimes } from "react-icons/fa";
-import { motion } from "framer-motion";
+
 const Mobilenavbar = () => {
   const [topnav, settopnav] = useState();
   const [homelist, sethomelist] = useState();
   const [bloglist, setbloglist] = useState();
   const [shoplist, setshoplist] = useState();
   const [pagelist, setpagelist] = useState();
+  
 
   const [nav, setnav] = useState();
   const navbar = () => {
@@ -26,13 +27,17 @@ const Mobilenavbar = () => {
   }, []);
   return (
     <>
-      <section className="py-2 mobile cursor-pointer">
+      
+
+      
+      
+       <section className="py-2 mobile cursor-pointer">
         <div
           className={`    ${
             nav
               ? "fixed top-0  px-2 py-2 sm:px-20 w-[100%]  z-50 bg-gray-900   duration-75 transition-transform translate-y-0 ease-in"
-              : "static container mx-auto"
-          } `}
+              : "static container mx-auto px-2"
+          } `} style={{zIndex:"99999"}}
         >
           <div className="  flex justify-between items-center ">
             <Image src="/logo.png" width="180" height="150" alt="logo" />
@@ -51,7 +56,7 @@ const Mobilenavbar = () => {
           </div>
         </div>
 
-        {topnav ? (
+        {  topnav?  (
           <div className=" flex justify-between items-center transition-all">
             <ul
               className="flex-col items-center fixed top-0 left-0 mobilelist w-[50%] h-[100%] border-r-4"
@@ -156,8 +161,12 @@ const Mobilenavbar = () => {
               </li>
             </ul>
           </div>
-        ) : null}
-      </section>
+        
+     ) : null }
+         
+          </section>  
+
+     
     </>
   );
 };

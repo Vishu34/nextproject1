@@ -115,7 +115,7 @@ const Header = () => {
           <div className="space-y-10 text-center pt-40 pb-64 px-5 sm:px-12">
             <motion.h1
              initial={{scale:0 }}
-             whileInView={{scale:1}} 
+             whileInView={{scale:0.7}} 
              transition={{ type:"spring", stiffness:"300" ,delay:0 }}
              className={`text-4xl sm:text-5xl line leading-relaxed head`}>
               Astrology Revels The Will Of God

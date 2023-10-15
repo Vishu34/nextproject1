@@ -21,8 +21,8 @@ const Pricepack = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-14 pb-14">
               <motion.div initial={{scale:0}}
-              whileInView={{scale:1}}
-              transition={{type:"spring", stiffness:"100", duration:"1"}} className="bg-white p-5 text-center space-y-8 ">
+              whileInView={{scale:0.9}}
+              transition={{type:"spring", stiffness:"50", duration:"1"}} className="bg-white p-5 text-center space-y-8 ">
                 <h1 className={` head text-xl  pb-10`}>Basic Package</h1>
 
                 <div className="">
@@ -48,8 +48,8 @@ const Pricepack = () => {
               </motion.div>
 
               <motion.div initial={{scale:0}}
-                whileInView={{scale:1}}
-                transition={{type:"spring", stiffness:"100", duration:"1"}} className="bg-white scale-110 my-14 md:my-0">
+                whileInView={{scale:0.9}}
+                transition={{type:"spring", stiffness:"50", duration:"1"}} className="bg-white scale-110 my-14 md:my-0">
                 <h1 className="bg-orange-500 w-[100%] text-white p-2 text-center">
                   Most Popular
                 </h1>
@@ -79,8 +79,8 @@ const Pricepack = () => {
               </motion.div>
 
               <motion.div initial={{scale:0}}
-              whileInView={{scale:1}}
-              transition={{type:"spring", stiffness:"100", duration:"1"}} className="bg-white p-5 text-center space-y-8 ">
+              whileInView={{scale:0.9}}
+              transition={{type:"spring", stiffness:"50", duration:"1"}} className="bg-white p-5 text-center space-y-8 ">
                 <h1 className={` head text-xl  pb-10`}>Pro Package</h1>
                 <div className="">
                   <hr className="text-black bg-black w-[100%] mt-20 z-20" />
@@ -109,7 +109,7 @@ const Pricepack = () => {
           <div className="daily-planetary  text-center ">
             <motion.div initial={{y:0}}
                 whileInView={{y:-100}}
-                transition={{type:"spring", stiffness:"100", duration:"1"}} className="pt-48 text-white space-y-8 px-4 sm:px-16">
+                transition={{type:"spring", stiffness:"50", duration:"1"}} className="pt-48 text-white space-y-8 px-4 sm:px-16">
               <h1 className={` head text-3xl`}>
                 Daily Planetary <span className="astrology">Overview</span>
               </h1>

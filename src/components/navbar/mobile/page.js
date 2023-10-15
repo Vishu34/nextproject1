@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import { FaList, FaTimes } from "react-icons/fa";
+import OutsideClickHandler from "react-outside-click-handler";
 
 const Mobilenavbar = () => {
   const [topnav, settopnav] = useState();
@@ -12,7 +13,7 @@ const Mobilenavbar = () => {
   const [bloglist, setbloglist] = useState();
   const [shoplist, setshoplist] = useState();
   const [pagelist, setpagelist] = useState();
-  
+  const [outside,setoutside]=useState()
 
   const [nav, setnav] = useState();
   const navbar = () => {
@@ -25,13 +26,44 @@ const Mobilenavbar = () => {
   useEffect(() => {
     window.addEventListener("scroll", navbar);
   }, []);
+ const clickoutside=()=>{
+  setoutside(!outside)
+ }
+ const homelist1=()=>{
+  sethomelist(!homelist)
+  setpagelist(false)
+  setbloglist(false)
+  setshoplist(false)
+ }
+ const pagelist1=()=>{
+  sethomelist(false)
+  setpagelist(!pagelist)
+  setbloglist(false)
+  setshoplist(false)
+ }
+ const bloglist1=()=>{
+  sethomelist(false)
+  setpagelist(false)
+  setbloglist(!bloglist)
+  setshoplist(false)
+ }
+ const shoplist1=()=>{
+  sethomelist(false)
+  setpagelist(false)
+  setbloglist(false)
+  setshoplist(!shoplist)
+ }
+
+ 
   return (
     <>
       
 
       
       
-       <section className="py-2 mobile cursor-pointer">
+      
+      <OutsideClickHandler onOutsideClick={()=>setoutside(false)}>
+      <section className="py-2 mobile cursor-pointer" onClick={clickoutside}>
         <div
           className={`    ${
             nav
@@ -61,10 +93,11 @@ const Mobilenavbar = () => {
             <ul
               className="flex-col items-center fixed top-0 left-0 mobilelist w-[50%] h-[100%] border-r-4"
             >
-              <li className="  homelist1">
+              <li className="  homelist1=>{
+                ">
                 <div
                   className=" navlist flex justify-between items-center  p-3 border-b border-slate-600 rounded-sm"
-                  onClick={() => sethomelist(!homelist)}
+                  onClick={homelist1}
                 >
                   Home{" "}
                   {homelist ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />}
@@ -96,7 +129,7 @@ const Mobilenavbar = () => {
               <li className=" bloglist1">
                 <div
                   className=" navlist flex justify-between items-center p-3 border-b border-slate-600 rounded-sm"
-                  onClick={() => setbloglist(!bloglist)}
+                  onClick={bloglist1}
                 >
                   Blog{" "}
                   {bloglist ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />}
@@ -118,7 +151,7 @@ const Mobilenavbar = () => {
                 {" "}
                 <div
                   className=" navlist flex justify-between items-center p-3 border-b border-slate-600 rounded-sm"
-                  onClick={() => setshoplist(!shoplist)}
+                  onClick={shoplist1}
                 >
                   Shop{" "}
                   {shoplist ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />}
@@ -138,7 +171,7 @@ const Mobilenavbar = () => {
                 {" "}
                 <div
                   className=" navlist flex justify-between items-center p-3 border-b border-slate-600 rounded-sm"
-                  onClick={() => setpagelist(!pagelist)}
+                  onClick={pagelist1}
                 >
                   Pages{" "}
                   {pagelist ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />}
@@ -165,6 +198,7 @@ const Mobilenavbar = () => {
      ) : null }
          
           </section>  
+      </OutsideClickHandler>
 
      
     </>
